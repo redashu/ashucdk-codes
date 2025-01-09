@@ -12,6 +12,7 @@ export class AshuEc2VpcDay3Stack extends cdk.Stack {
     const vpc = ec2.Vpc.fromLookup(this,'ashuvpc',{
       isDefault: true
     });
+  
     // creating ec2 instance
     const ashuvm = new ec2.Instance(this,'ashuvm1',{
       vpc,
